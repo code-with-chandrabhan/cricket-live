@@ -37,11 +37,11 @@ const handleBtn = () => {
           </div>
           </header>
 
-          <div className='flex justify-center items-center gap-2 pt-20 text-2xl'>
+          <div className='flex justify-center items-center gap-2 pt-20 text-2xl '>
             <img className='w-5' src={red} alt="red" />
             <p>Live Cricket Score APP</p>
           </div>
-          <div className='grid grid-cols-4 gap-2 mt-4 p-4'>
+          <div className='grid md:grid-cols-4  gap-2 mt-4 p-4 '>
             {data.map((curVal) => {
              if(curVal.status != "Match not started"){
               if(curVal.series.includes(search)  || curVal.t1.includes(search) || curVal.t2.includes(search)){
