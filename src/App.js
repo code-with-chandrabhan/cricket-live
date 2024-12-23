@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import React from 'react';
 import red from './red.png';
+
 function App() {
   const [data, setData] = useState([]);
   const[inputData, setInputData] = useState("");
@@ -24,11 +25,15 @@ const handleInput = (e) => {
   setInputData(e.target.value);
 }
 const handleBtn = () => {
- 
-  setSearch(inputData);
-  getData();
-
+  const data1 = [];
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].series == inputData) {
+      data1.push(data[i]);
+    }
+  }
+  setData(data1);
 }
+
   return (
   <>        <header className='bg-black text-white py-6 fixed w-full'>
           <div className='text-center text-2xl'>
